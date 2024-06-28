@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="pjsip-2.13.1-iso">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/pjsip-2.13.1-iso.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/pjsip-2.13.1-iso.jar!/" />
+    </SOURCES>
+  </library>
+</component>

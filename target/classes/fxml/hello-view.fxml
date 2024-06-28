@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ViewPackage.HelloController">
+    <children>
+        <HBox>
+            <children>
+                <VBox alignment="CENTER" spacing="20.0">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                    <children>
+                  <HBox fx:id="chn3Panel" spacing="3.0" style="-fx-border-width: 5; -fx-border-style: solid;" styleClass="transparent-border">
+                     <children>
+                        <Button fx:id="channel3Button" maxHeight="72.0" maxWidth="52.0" minHeight="72.0" minWidth="52.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="52.0" />
+                        <VBox alignment="CENTER" spacing="1.0">
+                           <children>
+                              <Label fx:id="chn3NameLbl" alignment="CENTER" maxHeight="150.0" maxWidth="150.0" minHeight="27.0" minWidth="105.0" prefHeight="27.0" prefWidth="105.0" text="WAITING" />
+                              <ProgressBar fx:id="chn3Pbar" maxHeight="8.0" maxWidth="111.0" minHeight="8.0" minWidth="111.0" prefHeight="10.0" prefWidth="111.0" progress="0.0" />
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Button fx:id="down3Btn" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#onDown3Btn" prefHeight="35.0" prefWidth="35.0" />
+                                    <Button fx:id="up3Btn" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#onUp3Btn" prefHeight="35.0" prefWidth="35.0" />
+                                    <Button fx:id="mute3Btn" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#onMute3" prefHeight="35.0" prefWidth="35.0">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                        <HBox fx:id="chn1Panel" spacing="3.0" style="-fx-border-width: 5; -fx-border-style: solid;" styleClass="transparent-border">
+                            <children>
+                                <Button fx:id="channel1Button" maxHeight="72.0" maxWidth="52.0" minHeight="72.0" minWidth="52.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="52.0" />
+                                <VBox alignment="CENTER" spacing="1.0">
+                                    <children>
+                                        <Label fx:id="chn1NameLbl" alignment="CENTER" maxHeight="150.0" maxWidth="150.0" minHeight="27.0" minWidth="105.0" prefHeight="27.0" prefWidth="105.0" text="CONNECT" />
+                                        <ProgressBar fx:id="chn1Pbar" maxHeight="8.0" maxWidth="111.0" minHeight="8.0" minWidth="111.0" prefHeight="10.0" prefWidth="111.0" progress="0.0" />
+                                        <HBox spacing="3.0">
+                                            <children>
+                                                <Button fx:id="down1Btn" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#onDown1Btn" prefHeight="35.0" prefWidth="35.0" />
+                                                <Button fx:id="up1Btn" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#onUp1Btn" prefHeight="35.0" prefWidth="35.0" />
+                                                <Button fx:id="mute1Btn" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#onMute1" prefHeight="35.0" prefWidth="35.0">
+                                                    <font>
+                                                        <Font size="10.0" />
+                                                    </font>
+                                                </Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox alignment="CENTER" spacing="20.0">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+               <children>
+                  <HBox fx:id="chn4Panel" spacing="3.0" style="-fx-border-width: 5; -fx-border-style: solid;" styleClass="transparent-border">
+                     <children>
+                        <Button fx:id="channel4Button" maxHeight="72.0" maxWidth="52.0" minHeight="72.0" minWidth="52.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="52.0" />
+                        <VBox alignment="CENTER" spacing="1.0">
+                           <children>
+                              <Label fx:id="chn4NameLbl" alignment="CENTER" maxHeight="150.0" maxWidth="150.0" minHeight="27.0" minWidth="105.0" prefHeight="27.0" prefWidth="105.0" text="FOR" />
+                              <ProgressBar fx:id="chn4Pbar" maxHeight="8.0" maxWidth="111.0" minHeight="8.0" minWidth="111.0" prefHeight="10.0" prefWidth="111.0" progress="0.0" />
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Button fx:id="down4Btn" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#onDown4Btn" prefHeight="35.0" prefWidth="35.0" />
+                                    <Button fx:id="up4Btn" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#onUp4Btn" prefHeight="35.0" prefWidth="35.0" />
+                                    <Button fx:id="mute4Btn" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#onMute4" prefHeight="35.0" prefWidth="35.0">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="chn2Panel" spacing="3.0" style="-fx-border-width: 5; -fx-border-style: solid;" styleClass="transparent-border">
+                     <children>
+                        <Button fx:id="channel2Button" maxHeight="72.0" maxWidth="52.0" minHeight="72.0" minWidth="52.0" mnemonicParsing="false" prefHeight="72.0" prefWidth="52.0" />
+                        <VBox alignment="CENTER" spacing="1.0">
+                           <children>
+                              <Label fx:id="chn2NameLbl" alignment="CENTER" maxHeight="150.0" maxWidth="150.0" minHeight="27.0" minWidth="105.0" prefHeight="27.0" prefWidth="105.0" text="--------" />
+                              <ProgressBar fx:id="chn2Pbar" maxHeight="8.0" maxWidth="111.0" minHeight="8.0" minWidth="111.0" prefHeight="10.0" prefWidth="111.0" progress="0.0" />
+                              <HBox spacing="3.0">
+                                 <children>
+                                    <Button fx:id="down2Btn" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#onDown2Btn" prefHeight="35.0" prefWidth="35.0" />
+                                    <Button fx:id="up2Btn" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#onUp2Btn" prefHeight="35.0" prefWidth="35.0" />
+                                    <Button fx:id="mute2Btn" maxHeight="35.0" maxWidth="35.0" minHeight="35.0" minWidth="35.0" mnemonicParsing="false" onAction="#onMute2" prefHeight="35.0" prefWidth="35.0">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+                </VBox>
+            <VBox alignment="CENTER" spacing="10.0">
+               <children>
+                      <Slider fx:id="commonVolumeSlider" minWidth="10.0" orientation="VERTICAL" prefHeight="167.0" prefWidth="7.0" value="100.0" />
+                    <Button fx:id="shiftBtn" alignment="CENTER" mnemonicParsing="false" onAction="#onShift" text="Shift" />
+               </children>
+            </VBox>
+            </children>
+        </HBox>
+    </children>
+    <padding>
+        <Insets bottom="20.0" right="20.0" />
+    </padding>
+</VBox>

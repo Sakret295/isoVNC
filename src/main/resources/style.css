@@ -1,0 +1,17 @@
+.yellow-bar {
+    -color-progress-bar-fill: #ffb400;
+}
+
+.red-bar {
+    -color-progress-bar-fill: #bb0000;
+}
+
+.transparent-border {
+    -fx-border-color: transparent;
+}
+
+.green-border {
+    -fx-border-color: #14a050;
+    /*-fx-border-width: 5px;*/
+    /*-fx-border-style: solid;*/
+}

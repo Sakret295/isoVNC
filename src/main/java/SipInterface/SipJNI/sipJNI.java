@@ -1,7 +1,8 @@
 package SipInterface.SipJNI;//import com.example.demovcp.HelloApplication;
 
-import Core.SipChannelInterface;
-import Core.SipPanelInterface;
+import SipInterface.AppConfig;
+import SipInterface.SipChannelInterface;
+import SipInterface.SipPanelInterface;
 
 public class sipJNI implements SipChannelInterface, SipPanelInterface {
     static {
@@ -10,6 +11,7 @@ public class sipJNI implements SipChannelInterface, SipPanelInterface {
 
     private static sipJNI instance;
     private SipInterface.SipJNI.CallbackClass CallbackClass;
+    private boolean registered = false;
 //    private HelloApplication fxClass;
 
 //    public SipInterface.SipJNI.sipJNI(HelloApplication fxClass) {
@@ -86,18 +88,23 @@ public class sipJNI implements SipChannelInterface, SipPanelInterface {
     }
 
     @Override
-    public void channelSendMicSignal() {
+    public void channelSendMicSignal(int channel) {
         //TODO: implement microphone
     }
 
     @Override
-    public void panelStart() {
+    public void panelStart(AppConfig appConfig) {
         start(this.CallbackClass);
     }
 
-    @Override
-    public void panelRegisterThread() {
-        registerThread();
+    public boolean panelRegisterThisThread() {
+        if (registered)
+            return true;
+        else {
+            registerThread();
+            registered = true;
+            return true;
+        }
     }
 
     @Override
@@ -108,5 +115,10 @@ public class sipJNI implements SipChannelInterface, SipPanelInterface {
     @Override
     public void panelSendEndCall() {
         sendBye();
+    }
+
+    @Override
+    public void panelSetVolume(int volume) {
+        //TODO: not implemented
     }
 }

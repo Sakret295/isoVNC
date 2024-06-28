@@ -2,6 +2,7 @@ package Core.Channel;
 
 import Core.Channel.Enums.ActiveStatus;
 import Core.Channel.Enums.MicStatus;
+import Core.Channel.Enums.MuteStatus;
 
 public abstract class AbstractChannelAccessor {
     private static volatile AbstractChannelAccessor defaultAccessor;
@@ -29,5 +30,7 @@ public abstract class AbstractChannelAccessor {
     public abstract void setName(AbstractChannel channel, String name);
     public abstract void setVolume(AbstractChannel channel, int level);
     public abstract void setActiveStatus(AbstractChannel channel, ActiveStatus status);
+    public abstract void setMuteStatus(AbstractChannel channel, MuteStatus status);
     public abstract void setMicStatus(AbstractChannel channel, MicStatus status);
+    public abstract void setOnScreen(AbstractChannel channel, boolean value);
 }

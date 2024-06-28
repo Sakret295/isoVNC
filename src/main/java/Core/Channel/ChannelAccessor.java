@@ -2,6 +2,7 @@ package Core.Channel;
 
 import Core.Channel.Enums.ActiveStatus;
 import Core.Channel.Enums.MicStatus;
+import Core.Channel.Enums.MuteStatus;
 
 public class ChannelAccessor extends AbstractChannelAccessor{
     @Override
@@ -20,7 +21,17 @@ public class ChannelAccessor extends AbstractChannelAccessor{
     }
 
     @Override
+    public void setMuteStatus(AbstractChannel channel, MuteStatus status) {
+        channel.setMuteStatus(status);
+    }
+
+    @Override
     public void setMicStatus(AbstractChannel channel, MicStatus status) {
         channel.setMicStatus(status);
+    }
+
+    @Override
+    public void setOnScreen(AbstractChannel channel, boolean value) {
+        channel.setOnScreen(value);
     }
 }
