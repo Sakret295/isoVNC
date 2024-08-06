@@ -14,9 +14,12 @@ import javafx.scene.control.Slider;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 
 import java.net.URL;
+import java.text.DecimalFormat;
+import java.text.DecimalFormatSymbols;
 import java.util.ResourceBundle;
 
 public class HelloController implements Initializable, ViewContract {
@@ -158,17 +161,23 @@ public class HelloController implements Initializable, ViewContract {
     void onUp1Btn(ActionEvent event) {
         System.out.println("btn 1 up");
         viewModel.raiseVolume(0);
+        viewModel.raiseVolume(0);
+        viewModel.raiseVolume(0);
     }
 
     @FXML
     void onUp2Btn(ActionEvent event) {
         System.out.println("btn 2 up");
         viewModel.raiseVolume(1);
+        viewModel.raiseVolume(1);
+        viewModel.raiseVolume(1);
     }
 
     @FXML
     void onUp3Btn(ActionEvent event) {
         System.out.println("btn 3 up");
+        viewModel.raiseVolume(2);
+        viewModel.raiseVolume(2);
         viewModel.raiseVolume(2);
     }
 
@@ -422,10 +431,33 @@ public class HelloController implements Initializable, ViewContract {
         iconMutedView4 = new ImageView(muteIconMuted);
         setMuteIconView(iconUnmutedView4, mute4Btn, false);
 
+//        StackPane sliderTrackPane = (StackPane) commonVolumeSlider.lookup(".track");
+
+        commonVolumeSlider.setStyle("-track-color: #14a050");
         commonVolumeSlider.valueProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observable, Number oldValue, Number newValue) {
                 viewModel.setCommonVolume(newValue.intValue());
+
+                double percentage = (100.0 * newValue.doubleValue() / commonVolumeSlider.getMax()) / 100;
+//                String style = String.format("-fx-background-color: linear-gradient(to top, #14a050 %1$.1f%%, #969696 %1$.1f%%);", percentage);
+//                String style = "-track-color: red;";
+                System.out.println("value = " + newValue.doubleValue() / 100);
+                DecimalFormatSymbols decimalFormatSymbols = new DecimalFormatSymbols();
+                decimalFormatSymbols.setDecimalSeparator('.');
+                DecimalFormat decimalFormat = new DecimalFormat("#0.00", decimalFormatSymbols);
+//                String style = String.format("-track-color: linear-gradient(to top, " +
+//                        "#14a050 0.0, " +
+//                        "#14a050 " + decimalFormat.format(percentage) + ", " +
+//                        "-default-track-color " + decimalFormat.format(percentage) + ", " +
+//                        "-default-track-color 1.0);",
+//                        percentage);
+//                String style = String.format("-track-color: linear-gradient(to top, #14a050 0.5, #969696 0.5);",
+//                String style = String.format("-track-color: linear-gradient(to top, #14a050 " + decimalFormat.format(percentage) + ", #969696 " + decimalFormat.format(percentage) + ");");
+//                linear-gradient(to top, derive(-fx-text-box-border, -10%), -fx-text-box-border), -fx-background-color: -track-color;
+                String style = "-track-color: linear-gradient(to top, #14a050 " + decimalFormat.format(percentage) + ", #969696 " + decimalFormat.format(percentage) + ");";
+                System.out.println(style);
+                commonVolumeSlider.setStyle(style);
             }
         });
 

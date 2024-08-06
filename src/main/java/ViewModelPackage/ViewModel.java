@@ -93,7 +93,17 @@ public class ViewModel {
 
     public void raiseVolume(int channel){
         try {
-            manager.getOnScreenChannel(channel).adjustVolumeUp();
+            AbstractChannel chn = manager.getOnScreenChannel(channel);
+            if (chn.getMuteStatus() == MuteStatus.MUTED){
+                chn.adjustVolumeUp();
+                chn.adjustVolumeUp();
+            }
+            else {
+                chn.adjustVolumeUp();
+                chn.adjustVolumeUp();
+                chn.adjustVolumeUp();
+                chn.adjustVolumeUp();
+            }
         } catch (NotOnScreenException e) {
             e.printStackTrace();
         }
@@ -101,7 +111,11 @@ public class ViewModel {
 
     public void lowerVolume(int channel){
         try {
-            manager.getOnScreenChannel(channel).adjustVolumeDown();
+            AbstractChannel chn = manager.getOnScreenChannel(channel);
+            chn.adjustVolumeDown();
+            chn.adjustVolumeDown();
+            chn.adjustVolumeDown();
+            chn.adjustVolumeDown();
         } catch (NotOnScreenException e) {
             e.printStackTrace();
         }

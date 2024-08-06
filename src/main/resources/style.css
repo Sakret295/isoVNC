@@ -15,3 +15,25 @@
     /*-fx-border-width: 5px;*/
     /*-fx-border-style: solid;*/
 }
+
+.slider {
+    -default-track-color: -fx-control-inner-background;
+    -track-color: -default-track-color;
+    -color-slider-track: -track-color;
+    /*-track-color: linear-gradient(to top, red 0%, red 50.0%, green 50.0%, green 100%);*/
+}
+
+/*.slider .track {*/
+    /*-fx-background-color: red,*/
+    /*    linear-gradient(to top, derive(-fx-text-box-border, -10%), -fx-text-box-border),*/
+    /*    -track-color;*/
+    /*-fx-background-color: -track-color;*/
+    /*    red;*/
+    /*-fx-background-color: linear-gradient(to top, -track-color 50, #969696 50);*/
+/*}*/
+
+/*.slider .track {*/
+/*    -fx-background-color: #14a050;*/
+/*    -progress: 0.2;*/
+/*    -fx-background-color: linear-gradient(to top, #14a050 0.20, #969696 0.20);*/
+/*}*/

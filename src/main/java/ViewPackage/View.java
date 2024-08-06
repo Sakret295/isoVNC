@@ -18,11 +18,6 @@ public class View extends Application {
      * NOTE: This method is called on the JavaFX Application Thread.
      * </p>
      *
-     * @param stage the primary stage for this application, onto which
-     *                     the application scene can be set.
-     *                     Applications may create other stages, if needed, but they will not be
-     *                     primary stages.
-     * @throws Exception if something goes wrong
      */
     public static HelloController controller;
 
@@ -33,7 +28,7 @@ public class View extends Application {
         Scene scene = new Scene(fxmlLoader.load());
         if(getClass().getClassLoader().getResource("style.css") != null)
             scene.getStylesheets().add(Objects.requireNonNull(getClass().getClassLoader().getResource("style.css")).toExternalForm());
-        stage.setTitle("Hello!");
+        stage.setTitle("ISOVCP");
         stage.setScene(scene);
         stage.show();
 
